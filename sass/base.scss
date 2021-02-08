@@ -1,0 +1,51 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --grey-blue: hsl(227, 10%, 46%);
+
+  --dark-grey: hsl(0, 0%, 59%);
+
+  --regular: 400;
+  --bold: 700;
+
+  --shadow: 0 6rem 12rem -3rem rgba(8, 70, 94, 0.5);
+
+  --mobile: 34.375em;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 50%;
+}
+
+body {
+  background-color: var(--dark-cyan);
+  font-family: "Kumbh Sans", sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-blue);
+}
+
+body::before {
+  content: url(../images/bg-pattern-top.svg);
+  position: absolute;
+  transform: translate(-50%, -40%);
+}
+
+body::after {
+  content: url(../images/bg-pattern-bottom.svg);
+  position: absolute;
+  transform: translate(50%, 50%);
+}

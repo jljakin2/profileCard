@@ -1,0 +1,85 @@
+.card {
+  background: #fff;
+  width: 43.75rem;
+  height: 46.75rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 10;
+
+  &__info {
+    background-image: url(../images/bg-pattern-card.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    border-radius: 2rem 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 75%;
+    border-bottom: 1px solid #e8e9ec;
+
+    &--pic {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-60%);
+
+      img {
+        border-radius: 50%;
+        border: 5px solid #fff;
+      }
+    }
+
+    &--content {
+      margin: -5rem 0 3rem 0;
+      text-align: center;
+
+      h2 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      span {
+        font-weight: 400;
+        color: var(--grey-blue);
+      }
+
+      p {
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--grey-blue);
+      }
+    }
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.stat__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--num {
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &--label {
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+    color: var(--grey-blue);
+  }
+}

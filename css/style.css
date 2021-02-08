@@ -1,0 +1,104 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --grey-blue: hsl(227, 10%, 46%);
+  --dark-grey: hsl(0, 0%, 59%);
+  --regular: 400;
+  --bold: 700;
+  --shadow: 0 6rem 12rem -3rem rgba(8, 70, 94, 0.5); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 50%; }
+
+body {
+  background-color: var(--dark-cyan);
+  font-family: "Kumbh Sans", sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-blue); }
+
+body::before {
+  content: url(../images/bg-pattern-top.svg);
+  position: absolute;
+  transform: translate(-50%, -40%); }
+
+body::after {
+  content: url(../images/bg-pattern-bottom.svg);
+  position: absolute;
+  transform: translate(50%, 50%); }
+
+.card {
+  background: #fff;
+  width: 43.75rem;
+  height: 46.75rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 10; }
+  .card__info {
+    background-image: url(../images/bg-pattern-card.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    border-radius: 2rem 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 75%;
+    border-bottom: 1px solid #e8e9ec; }
+    .card__info--pic {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-60%); }
+      .card__info--pic img {
+        border-radius: 50%;
+        border: 5px solid #fff; }
+    .card__info--content {
+      margin: -5rem 0 3rem 0;
+      text-align: center; }
+      .card__info--content h2 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem; }
+      .card__info--content span {
+        font-weight: 400;
+        color: var(--grey-blue); }
+      .card__info--content p {
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--grey-blue); }
+  .card__stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; }
+
+.stat__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .stat__item--num {
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem; }
+  .stat__item--label {
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+    color: var(--grey-blue); }
